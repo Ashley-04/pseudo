@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/（ページの種類）#">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="email=no,telephone=no,address=no">
+        <title>擬似要素はマジで使える</title>
+        <meta name="description" content="（ページの説明）">
+
+        <meta name="robots" content="index,follow">
+
+        <meta property="og:admins" content="（FBのID）">
+        <meta property="og:title" content="（サイトタイトル）">
+        <meta property="og:type" content="（ページの種類）">
+        <meta property="og:description" content="（ページの説明）">
+        <meta property="og:url" content="（ページのURL）">
+        <meta property="og:image" content="（ogp画像のURL）">
+        <meta property="og:locale" content="ja_JP">
+        <meta property="og:site_name" content="（サイトタイトル）">
+        <meta name="twitter:card" content="（カード種類）">
+        <meta name="twitter:site" content="（@Twitterユーザー名）">
+
+        <link rel="canonical" href="（正しいページURL）">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css" media="screen">
+
+        <link rel="icon" href="favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="（アップルタッチアイコンの画像URL）">
+
+        <!-- （googleアナリティクスを入れる箇所①） -->
+        <!-- （他アナリティクス等を入れる箇所） -->
+    </head>
+    <body>
+        <!-- （googleアナリティクスを入れる箇所②） -->
+        <header>
+            <ul>
+                <li><a href="">Top</a></li>
+                <li>一覧
+                    <ul>
+                    <li><a href="">両脇に棒</a></li>
+                    <li><a href="">ステップ表現</a></li>
+                    <li><a href="">Q＆A</a></li>
+                    <li><a href="">背景文字</a></li>
+                    <li></li>
+                </ul></li>
+           
+            </ul>
+        </header>
+        <main>
+            <h1>擬似要素、擬似クラスを使いこなしたい</h1>
+<section class="side">
+    <h2 class="side__ttl">タイトルの両脇に装飾<span>title</span></h2>
+    <p>サイト内で繰り返し使用されることが多いので、一括で指定すると楽になります。</p>
+    <div class="side__text text">
+今回は「タイトルの両脇に装飾」をh2で、その中に「title」という文字をspanで挿入しています。<br>
+spanは改行させるためにdisplay:block;やmax-widthをきめています。max-widthを決めないと、擬似要素が要素の端までいってしまいます。
+    </div>
+</section>
+
+<section class="step">
+    <h2>ステップを表現<span>step</span></h2>
+    <p>何か順序やフローを表す際に用いられたりします。</p>
+    <div class="step__content">
+   <ul>
+    <li>内容入力</li>
+    <li>内容確認</li>
+    <li>送信完了</li>
+   </ul>
+    </div>
+    <div class="step__text text">
+パーツの説明からします。まず、「内容入力」などの項目はul,liを使用。今回はそれぞれの文字の上に番号が来てほしいので、liに擬似要素::beforeをつけています。<br>
+番号1-3を繋ぐ棒は、2番目の「内容確認」に擬似要素::afterで作成しています。
+</div>
+</section>
+<section class="faq">
+    <h2>よくある質問の装飾<span>faq</span></h2>
+<p>大体、QとAがついてます。ただ、それを1個1個記述するのめんどくさい人向け</p>
+<div class="faq__content">
+<ul>
+    <li class="faq__content--item faq__content--item1">
+        <div class="faq__content--q">
+          <p>何人兄弟ですか？</p>
+        </div>
+        <div class="faq__content--a">
+          <p>3人です。サッカーオタクの兄と横浜流星が命な妹がいます。つい最近3人でUSJ行きました。</p>
+        </div>
+      </li>
+</ul>
+
+
+</div>
+</section>
+
+<section class="back">
+    <h2>背景に少し装飾をしたい<span>background</span></h2>
+<p>何か要素を枠で囲ってみたけれど、背景色つけるだけだと寂しいな..なんて時</p>
+<div class="back__content">
+    <p>インタープランについて</p>
+    <div>ここ曙橋にあるインタープランITスクールには個性豊かな先生たちが揃っています。<br>出勤して先生たちとお話しするのも楽しみの一つです、尊敬。</div>
+</div>
+</section>
+
+        </main>
+        <footer>
+        </footer>
+ 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+$(function() {
+
+const question = $('.faq__content--q');
+const answer = $('.faq__content--a');
+question.on('click',function(){
+answer.slideToggle();
+$(this).toggleClass('open');
+});
+
+});
+        </script>
+    </body>
+</html>
