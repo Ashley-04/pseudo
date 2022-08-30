@@ -27,15 +27,16 @@
 
         <link rel="icon" href="favicon.ico">
         <link rel="apple-touch-icon-precomposed" href="（アップルタッチアイコンの画像URL）">
-
-        <!-- （googleアナリティクスを入れる箇所①） -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <script src="https://kit.fontawesome.com/51240e245e.js" crossorigin="anonymous"></script>
+                <!-- （googleアナリティクスを入れる箇所①） -->
         <!-- （他アナリティクス等を入れる箇所） -->
     </head>
     <body>
         <!-- （googleアナリティクスを入れる箇所②） -->
         <header>
             <ul>
-                <li><a href="">Top</a></li>
+                <li><a href="#top">Top</a></li>
                 <li>一覧
                     <ul>
                     <li><a href="">両脇に棒</a></li>
@@ -47,7 +48,7 @@
            
             </ul>
         </header>
-        <main>
+        <main id="top">
             <h1>擬似要素、擬似クラスを使いこなしたい</h1>
 <section class="side">
     <h2 class="side__ttl">タイトルの両脇に装飾<span>title</span></h2>
@@ -97,14 +98,56 @@ spanは改行させるためにdisplay:block;やmax-widthをきめています�
 <p>何か要素を枠で囲ってみたけれど、背景色つけるだけだと寂しいな..なんて時</p>
 <div class="back__content">
     <p>インタープランについて</p>
-    <div>ここ曙橋にあるインタープランITスクールには個性豊かな先生たちが揃っています。<br>聞いたらなんでも答えしていただけます。</div>
+    <div>ここ曙橋にあるインタープランITスクールには個性豊かな先生たちが揃っています。<br>聞いたらなんでも回答していただけます。</div>
 </div>
+</section>
+
+<section class="fonta">
+<h2>Font awesomeを利用したアイコン設置<span>fonts</span></h2>
+<p>Font awesomeは利用頻度が高いと思うのでぜひ使い方も含めマスター！</p>
+<div class="fonta__content">
+<div class="fonta__content--item">
+<h3>12月生募集中!</h3>
+    <ul>
+        <li><i class="fa-regular fa-display"></i>訓練内容</li>
+        <li><i class="fa-regular fa-calendar"></i>訓練期間</li>
+<li><i class="fa-regular fa-chart-pie"></i>カリキュラム</li>
+
+    </ul>
+</div>
+<div></div>
+</div>
+
+</section>
+
+<section class="underl">
+    <h2>アンダーラインを引いてみる<span>line</span></h2>
+    <p>アンダーラインもあるのとないのとでは重要性を表す度合いが違ってきます</p>
+    <p>ポイントは文字幅より少し長め、マーカーペンのように斜めに指定することです</p>
+    <div class="underl__content">
+        <h3>インタープランなら<span>未経験</span>でも大丈夫！</h3>
+        <h3>インタープランなら<span>未経験</span>でも大丈夫！</h3>
+    </div>
+</section>
+
+
+<section class="underl2">
+    <h2>アンダーラインを引いてみる2<span>line</span></h2>
+    <p>次はグラデーションを使用したアンダーラインです</p>
+    <p>グラデーションも何かと利用するので<a href="">ジェネレーター</a>はお気に入りへ</p>
+    <div class="underl2__content">
+        <h3>インタープランなら<span>未経験</span>でも大丈夫！</h3>
+        <h3>インタープランなら<span>未経験</span>でも大丈夫！</h3>
+    </div>
+</section>
+
+<section>
+    <h2>吹き出しも作ってみよう<span>balloons</span></h2>
 </section>
 
         </main>
         <footer>
         </footer>
- 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script>
 $(function() {
@@ -118,5 +161,6 @@ $(this).toggleClass('open');
 
 });
         </script>
+
     </body>
 </html>
