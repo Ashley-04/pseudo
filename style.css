@@ -134,6 +134,7 @@ section {
 section p {
   font-size: 14px;
   text-align: center;
+  line-height: 1.8;
 }
 
 section .text {
@@ -411,6 +412,45 @@ h2 span::after {
   padding-left: 30px;
 }
 
+.fonta__content--item:last-of-type p {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto;
+  background: #fff;
+  border: 1px solid var(--green);
+  padding: 6px;
+  position: relative;
+}
+
+.fonta__content--item:last-of-type p::before {
+  display: inline-block;
+  position: absolute;
+  content: '\f090';
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 20%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  font-family: 'font awesome 6 free';
+  font-weight: 600;
+  color: var(--green);
+}
+
+.fonta__content--item:last-of-type p:last-of-type {
+  background-color: var(--green);
+  color: #fff;
+  margin-top: 40px;
+}
+
+.fonta__content--item:last-of-type p:last-of-type::before {
+  content: '\f08b';
+  color: #fff;
+}
+
 .underl__content, .underl2__content {
   margin: 80px auto 0;
   text-align: center;
@@ -453,8 +493,23 @@ h2 span::after {
   margin-bottom: 0;
 }
 
+.underl2 p a {
+  border-bottom: 1px solid #333;
+  line-height: 1.6;
+}
+
 .underl2__content {
   background: var(--bg);
+}
+
+.underl2__content h3 span:last-of-type::before {
+  background: #f5f90a;
+  background: -webkit-gradient(linear, left top, right top, from(#f5f90a), to(#08ee4a));
+  background: linear-gradient(90deg, #f5f90a 0%, #08ee4a 100%);
+}
+
+.balloons h2 span {
+  max-width: 150px;
 }
 
 @media (max-width: 600px) {

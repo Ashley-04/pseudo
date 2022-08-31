@@ -105,6 +105,7 @@ spanは改行させるためにdisplay:block;やmax-widthをきめています�
 <section class="fonta">
 <h2>Font awesomeを利用したアイコン設置<span>fonts</span></h2>
 <p>Font awesomeは利用頻度が高いと思うのでぜひ使い方も含めマスター！</p>
+<p>1箇所のみで使用する場合はiタグでも良いでしょう、使い回しするようなものには擬似要素でつけると管理しやすいです。</p>
 <div class="fonta__content">
 <div class="fonta__content--item">
 <h3>12月生募集中!</h3>
@@ -115,7 +116,10 @@ spanは改行させるためにdisplay:block;やmax-widthをきめています�
 
     </ul>
 </div>
-<div></div>
+<div class="fonta__content--item">
+    <p>ログイン</p>
+    <p>ログアウト</p>
+</div>
 </div>
 
 </section>
@@ -134,15 +138,19 @@ spanは改行させるためにdisplay:block;やmax-widthをきめています�
 <section class="underl2">
     <h2>アンダーラインを引いてみる2<span>line</span></h2>
     <p>次はグラデーションを使用したアンダーラインです</p>
-    <p>グラデーションも何かと利用するので<a href="">ジェネレーター</a>はお気に入りへ</p>
+    <p>グラデーションも何かと利用するので<a href="https://cssgradient.io/" target="_blank">ジェネレーター</a>はお気に入りへ</p>
     <div class="underl2__content">
         <h3>インタープランなら<span>未経験</span>でも大丈夫！</h3>
         <h3>インタープランなら<span>未経験</span>でも大丈夫！</h3>
     </div>
 </section>
 
-<section>
+<section class="balloons">
     <h2>吹き出しも作ってみよう<span>balloons</span></h2>
+
+<div class="balloons__content">
+    <div class="balloons__content--item"></div>
+</div>
 </section>
 
         </main>
