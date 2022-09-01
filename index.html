@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-    <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/（ページの種類）#">
+    <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/website">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="format-detection" content="email=no,telephone=no,address=no">
-        <title>擬似要素はマジで使える</title>
-        <meta name="description" content="（ページの説明）">
+        <title>擬似要素に慣れよう</title>
+        <meta name="description" content="擬似要素、なんとなく難しそう。。と敬遠しがちですが意外と慣れればそんなこともない！使える！な要素なのでよく活用できそうな装飾を集めました。">
 
         <meta name="robots" content="index,follow">
 
@@ -15,25 +15,21 @@
         <meta property="og:type" content="（ページの種類）">
         <meta property="og:description" content="擬似要素、なんとなく難しそう。。と敬遠しがちですが意外と慣れればそんなこともない！使える！な要素なのでよく活用できそうな装飾を集めました。">
         <meta property="og:url" content="（ページのURL）">
-        <meta property="og:image" content="（ogp画像のURL）">
+        <meta property="og:image" content="https://bluegreen.jp/wp-content/uploads/2017/12/130_2048-1024x683.jpg">
         <meta property="og:locale" content="ja_JP">
         <meta property="og:site_name" content="擬似要素、擬似クラスを使って装飾">
         <meta name="twitter:card" content="（カード種類）">
         <meta name="twitter:site" content="（@Twitterユーザー名）">
 
-        <link rel="canonical" href="（正しいページURL）">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="style.css" media="screen">
 
         <link rel="icon" href="favicon.ico">
         <link rel="apple-touch-icon-precomposed" href="（アップルタッチアイコンの画像URL）">
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
         <script src="https://kit.fontawesome.com/51240e245e.js" crossorigin="anonymous"></script>
-                <!-- （googleアナリティクスを入れる箇所①） -->
-        <!-- （他アナリティクス等を入れる箇所） -->
+
     </head>
     <body>
-        <!-- （googleアナリティクスを入れる箇所②） -->
         <header>
             <ul>
                 <li><a href="#top">Top</a></li>
@@ -147,7 +143,7 @@ spanは改行させるためにdisplay:block;やmax-widthをきめています�
 
 <section class="balloons">
     <h2>吹き出しも作ってみよう<span>balloons</span></h2>
-<p>吹き出しは指定が細かいので、ネットで探したものをコピペするに限ります
+<p>吹き出しは指定が細かいので、ネットで探したものをコピペするに限ります。<br>ここから形はご自由に変化させると良いです。
 </p>
 <div class="balloons__content">
     <div class="balloons__content-top">
@@ -163,12 +159,28 @@ spanは改行させるためにdisplay:block;やmax-widthをきめています�
 </div>
 
 </section>
+<section class="box">
+<h2>おしゃれに見える背景ボックス<span>box</span></h2>
+<p>化粧品なんかのサイトで見かけますが、レスポンシブ後のデザインでまたコーディング方法が変わると思います(今回はレスポンシブさせていない)<br>単にboredrの付けたボックスに写真を重ねても実装できます。</p>
 
+<div class="box__content">
+<div class="box_wrap">
+    <div class="box_text">
+<p>年齢を感じさせない素肌美人の条件とは?<p>
+
+<p>年齢を感じさせない「素肌美人の条件」を紹介。年齢とともに減少するコラーゲンやエラスチンを補い、弾力のある素肌を保つこと。乾燥や紫外線から肌を守ることも大切である。</p>
+<span class="border"></span>
+    </div> 
+    <div class="box_btn more_btn"><a href="/shop/information">MORE</a></div>
+    <img src="https://bluegreen.jp/wp-content/uploads/2017/12/130_2048-1024x683.jpg" alt="flower">
+    </div>
+</div>
+</section>
 <section class="hover">
     <h2>ホバーは(ほぼ)必ず装飾をつける<span>hover</span></h2>
     <p>ホバーしたとき、何もないとユーザーは「何も働きのない部分なのかな？」と思ってしまいます。リンクには極力ホバーアクションをつけましょう。</p>
 <div class="hover__content">
-    <div class="hover__content--item"><a href=""></a></div>
+    <div class="hover__content--item">アンダーラインのホバーアクションについては<a href="https://hakenblog.com/css-hover-underline-animation/#">こちら</a>が参考になります。<br>その他にも種類はたくさんありますので調べてみてください。</div>
 </div>
 
 </section>
